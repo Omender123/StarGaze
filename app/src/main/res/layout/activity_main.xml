@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="star.example.stargaze.activities.MainActivity">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            tools:context="star.example.stargaze.activities.MainActivity">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimaryDark"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:layout_alignParentTop="true"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:id="@+id/tool_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:text="Discover Events"
+                        />
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+<!--            <LinearLayout-->
+<!--                android:id="@+id/search_container"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                -->
+<!--                android:background="@color/colorPrimaryDark"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                >-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_search"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="@dimen/margin_10"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:layout_marginEnd="@dimen/margin_10"-->
+<!--                    android:padding="@dimen/padding_5"-->
+<!--                    android:background="@drawable/search_input_bg"-->
+<!--                    android:drawableStart="@drawable/ic_search"-->
+<!--                    android:drawablePadding="14dp"-->
+<!--                    android:elevation="0dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:hint="Search Products..."-->
+<!--                    android:inputType="text"-->
+<!--                    android:maxLines="1"-->
+<!--                    android:paddingStart="16dp"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:textAlignment="viewStart"-->
+<!--                    android:textColor="#404253"-->
+<!--                    android:textColorHint="#33404253"-->
+<!--                    tools:ignore="RtlCompat"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/linear_toolbar"-->
+<!--                    app:layout_constraintBottom_toTopOf="@+id/recycler_my_event" />-->
+<!--            </LinearLayout>-->
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar"
+                android:layout_above="@+id/bottom_nav"
+                android:layout_marginBottom="2dp"
+                 />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_nav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:itemIconTint="@drawable/bottom_nav_color_selector"
+                app:itemTextColor="@drawable/bottom_nav_color_selector"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bottom_navigation_bg"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_10"
+                app:itemIconSize="@dimen/bottom_navigation_icon_size"
+                app:menu="@menu/bottom_nav_menu" />
+
+        </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:itemIconTint="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/head"
+                layout="@layout/drawer_header_layout" />
+
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>
+</layout>

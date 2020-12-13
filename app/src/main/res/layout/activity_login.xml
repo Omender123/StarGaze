@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+        <!--                <include-->
+        <!--                    android:id="@+id/tool"-->
+        <!--                    layout="@layout/toolbar" />-->
+
+        <!--                <LinearLayout-->
+        <!--                    android:id="@+id/linear"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="220dp"-->
+        <!--                    android:background="@drawable/banner"-->
+        <!--                    android:gravity="center"-->
+        <!--                    android:orientation="vertical"-->
+        <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+        <!--                    app:layout_constraintHorizontal_bias="0.0"-->
+        <!--                    app:layout_constraintStart_toStartOf="parent"-->
+        <!--                    app:layout_constraintTop_toBottomOf="@+id/tool">-->
+
+        <!--                    &lt;!&ndash;                <ImageView&ndash;&gt;-->
+        <!--                    &lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+        <!--                    &lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
+        <!--                    &lt;!&ndash;                    android:adjustViewBounds="true"&ndash;&gt;-->
+        <!--                    &lt;!&ndash;                    android:scaleType="centerCrop"&ndash;&gt;-->
+        <!--                    &lt;!&ndash;                    android:src="@drawable/concert" />&ndash;&gt;-->
+
+        <!--                    <TextView-->
+        <!--                        android:id="@+id/sign_up_header"-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_gravity="center"-->
+        <!--                        android:gravity="center"-->
+        <!--                        android:text="SignIn"-->
+        <!--                        android:textAlignment="center"-->
+        <!--                        android:textColor="@color/white"-->
+        <!--                        android:textSize="@dimen/text_size_30"-->
+        <!--                        android:textStyle="bold" />-->
+        <!--                </LinearLayout>-->
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toTopOf="@+id/img_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="6dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/line_hor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginStart="@dimen/margin_24"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_welcome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="start"
+                        android:paddingTop="@dimen/padding_10"
+                        android:paddingEnd="@dimen/padding_10"
+                        android:paddingBottom="@dimen/padding_10"
+                        android:text="Welcome back"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_24"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_welcome"
+                        android:background="@drawable/line"
+                        android:orientation="vertical"
+
+
+                        />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/ed_user_name"
+                    style="@style/EditTextStyle"
+                    android:layout_below="@+id/line_hor"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:inputType="number"
+                    android:drawableLeft="@drawable/mobile_icon"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:hint="Enter Mobile No" />
+
+
+                <EditText
+                    android:id="@+id/ed_pass"
+                    style="@style/EditTextStyle"
+                    android:layout_below="@+id/ed_user_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/pass_icon"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:hint="Password"
+                    android:inputType="textPassword" />
+
+                <TextView
+                    android:id="@+id/tv_forgot_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ed_pass"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:padding="@dimen/padding_10"
+                    android:layout_marginEnd="@dimen/margin_24"
+                    android:text="Forgot Password"
+                    android:textAlignment="center"
+                    android:textColor="@color/login_border"
+                    android:textSize="@dimen/text_size_12"
+                    android:textStyle="bold" />
+
+                <star.example.stargaze.utils.NeomorphFrameLayout
+                    android:id="@+id/neu_mor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_forgot_btn"
+                    android:layout_centerHorizontal="true"
+                    app:neomorph_background_color="@color/button_color"
+                    app:neomorph_corner_radius="7dp"
+                    app:neomorph_elevation="1dp"
+                    app:neomorph_highlight_color="@color/neomorph_highlight_color_red"
+                    app:neomorph_shadow_color="@color/shadowBlack"
+                    app:neomorph_shadow_type="outer"
+                    android:layout_marginTop="@dimen/margin_24"
+                    app:neomorph_view_type="rectangular">
+
+                    <TextView
+                        android:id="@+id/img_login"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/padding_24"
+                        android:paddingTop="@dimen/padding_10"
+                        android:paddingEnd="@dimen/padding_24"
+                        android:paddingBottom="@dimen/padding_10"
+                        android:text="Login"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="bold" />
+                </star.example.stargaze.utils.NeomorphFrameLayout>
+
+                <TextView
+                    android:id="@+id/goto_sign_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/neu_mor"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_10"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_size_12" />
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <ImageView
+            android:id="@+id/img_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/bottom_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

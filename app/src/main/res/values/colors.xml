@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#B9B7B7</color>
+    <color name="colorPrimaryDark">#0F161F</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="text_input_bg">#8543688A</color>
+    <color name="wallet_row_color">#21262C</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray_opacity">#B5474242</color>
+    <color name="text_gray">#657788</color>
+    <color name="gray">#D3D3D3</color>
+    <color name="orange">#FEC24D</color>
+    <color name="button_color"> #D9163D</color>
+    <color name="shadow_orange">#FCD280</color>
+    <color name="gray_light">#F7F6F6</color>
+    <color name="login_border">#757373</color>
+    <color name="nav_menu_color">#23262B</color>
+    <color name="background_color"> #0F161F</color>
+    <color name="neomorph_background_color">#F1F3F6</color>
+    <color name="neomorph_shadow_color">#D9DBDE</color>
+    <color name="neomorph_highlight_color">#FFFFFF</color>
+    <color name="neomorph_highlight_color_red">#FC6A1D</color>
+    <color name="shadowBlack">#000</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="opacity_green">#882B681F</color>
+
+</resources>

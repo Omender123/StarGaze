@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    tools:context="star.example.stargaze.activities.MyTicketActivity">
+
+    <RelativeLayout
+        android:id="@+id/linear_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:padding="@dimen/padding_5"
+            android:src="@drawable/ic_arrow_left" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/img_back_arrow"
+            android:padding="@dimen/padding_5"
+            android:text="My Ticket"
+
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_toolbar"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/booking_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="130dp"
+            android:layout_margin="@dimen/margin_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_event_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Delhi Event Live \nConcert 2020"
+                android:layout_marginStart="@dimen/margin_24"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold"
+                android:padding="@dimen/padding_5"
+                android:textAlignment="textStart"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/txt_event_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Delhi,New Delhi"
+                android:layout_below="@+id/txt_event_title"
+                android:layout_marginStart="@dimen/margin_24"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold"
+                android:padding="@dimen/padding_5"
+                android:textAlignment="textStart"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraint">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      >
+
+        <TextView
+            android:id="@+id/txt_event_title_and_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:drawableLeft="@drawable/ic_calendar3"
+            android:gravity="start"
+            android:layout_margin="@dimen/margin_8"
+            android:text="Date and Time"
+            android:drawablePadding="@dimen/padding_10"
+            android:lineSpacingExtra="4dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_18" />
+
+        <LinearLayout
+            android:id="@+id/artist_info_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/txt_event_title_and_time"
+            >
+            <TextView
+                android:id="@+id/tv_artist_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_margin="@dimen/margin_8"
+                android:text="Artist :"
+                android:drawablePadding="@dimen/padding_10"
+                android:lineSpacingExtra="4dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_18" />
+            <TextView
+                android:id="@+id/tv_artist_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_margin="@dimen/margin_8"
+                android:text="Raj Kumar Rao"
+                android:drawablePadding="@dimen/padding_10"
+                android:lineSpacingExtra="4dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_18" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txt_people_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/artist_info_container"
+            android:drawableLeft="@drawable/ic_history3"
+            android:gravity="center"
+            android:layout_margin="@dimen/margin_8"
+            android:drawablePadding="@dimen/padding_10"
+            android:text="Online Event"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_label_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:drawableLeft="@drawable/ic_share"
+            android:gravity="start"
+            android:drawablePadding="@dimen/padding_10"
+            android:text="Rs 500/ \n +includes tax and purchase"
+           android:layout_margin="@dimen/margin_8"
+            android:textAlignment="textStart"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_14"
+            android:layout_below="@+id/txt_people_event"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_add_discount_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:drawableLeft="@drawable/ic_add"
+            android:gravity="start"
+            android:drawablePadding="@dimen/padding_10"
+            android:text="Add Discount Code"
+            android:layout_margin="@dimen/margin_8"
+            android:textAlignment="textStart"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_14"
+            android:layout_below="@+id/txt_label_price"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:id="@+id/discount_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_below="@+id/tv_add_discount_code">
+            <TextView
+                android:id="@+id/tv_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:gravity="start"
+                android:text="@string/discount_code_label"
+                android:padding="@dimen/padding_5"
+
+                android:textAlignment="textStart"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14"
+                />
+            <EditText
+                android:id="@+id/ed_discount_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_text_bg"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:layout_gravity="center"
+                android:hint="@string/enter_discount_code"
+                android:textColor="@color/white"
+                android:textColorHint="@color/login_border"
+                android:paddingStart="@dimen/padding_10"
+                />
+        </LinearLayout>
+
+        <star.example.stargaze.utils.NeomorphFrameLayout
+            android:id="@+id/neu_mor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:neomorph_view_type="rectangular"
+            app:neomorph_shadow_type="inner"
+            app:neomorph_elevation="8dp"
+            app:neomorph_corner_radius="7dp"
+            android:layout_below="@+id/discount_container"
+            app:neomorph_background_color="@color/button_color"
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_highlight_color="@color/neomorph_highlight_color"
+            >
+            <TextView
+                android:id="@+id/tv_book_next_btn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/padding_24"
+                android:paddingEnd="@dimen/padding_24"
+                android:paddingTop="@dimen/padding_16"
+                android:paddingBottom="@dimen/padding_16"
+                android:text="Next"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14"
+                />
+        </star.example.stargaze.utils.NeomorphFrameLayout>
+
+
+    </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="star.example.stargaze.activities.ConfirmActivity"
+       >
+
+        <ImageView
+            android:id="@+id/img_ticket_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/confirm"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/txt_success_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:text="Thank You \n For Your Booking"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_24"
+            android:layout_below="@+id/img_ticket_confirm"
+            android:layout_marginTop="@dimen/margin_32" />
+
+        <TextView
+            android:id="@+id/txt_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/text_gray"
+            android:textAlignment="center"
+            android:text="Your ticket has been confirmed for 20 June 2020"
+            android:textSize="@dimen/text_size_14"
+            android:layout_below="@+id/txt_success_msg"
+            android:padding="@dimen/padding_10"
+            />
+
+        <TextView
+            android:id="@+id/tv_book_more_btn"
+            style="@style/TextButtonStyle"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/orange_btn_bg"
+            android:gravity="center"
+            android:text="Book More Ticket"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_12"
+            android:textStyle="bold"
+            android:paddingStart="@dimen/padding_16"
+            android:paddingEnd="@dimen/padding_18"
+            android:paddingTop="@dimen/padding_16"
+            android:paddingBottom="@dimen/padding_16"
+            android:layout_above="@+id/txt_skip_btn"
+            android:layout_centerHorizontal="true"
+           />
+
+        <TextView
+            android:id="@+id/txt_skip_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/text_gray"
+            android:textAlignment="center"
+            android:text="Skip"
+            android:textSize="@dimen/text_size_18"
+             android:layout_alignParentBottom="true"
+             android:padding="@dimen/padding_10"
+            />
+    </RelativeLayout>
+</layout>

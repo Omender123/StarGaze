@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        tools:context="star.example.stargaze.authentication.SuccessActivity">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/circle_tick"
+
+                />
+
+            <TextView
+                android:id="@+id/txt_success"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_24"
+                android:textStyle="bold"
+                android:padding="@dimen/padding_10"
+
+                />
+
+            <TextView
+                android:id="@+id/dummy_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/successfully_changed"
+                android:textSize="@dimen/text_size_12"
+                android:padding="@dimen/padding_10"
+                android:maxLines="2"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_okay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="Skip"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_18"
+            android:textColor="@color/white"
+            android:elevation="6dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:padding="24dp"
+            android:layout_marginBottom="@dimen/margin_16" />
+    </RelativeLayout>
+</layout>

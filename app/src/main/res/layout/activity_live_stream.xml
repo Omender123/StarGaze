@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/reaction_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="star.example.stargaze.activities.LiveStreamActivity">
+
+<!--        <SurfaceView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" />-->
+<!--        <ImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            android:src="@drawable/live_bg"/>-->
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:id="@+id/simple_player">
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="invisible" />
+        </com.google.android.exoplayer2.ui.PlayerView>
+        <TextView
+            android:id="@+id/txt_live_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="Live"
+            android:drawableLeft="@drawable/red_dot"
+            android:drawablePadding="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="@dimen/margin_16"
+            android:elevation="@dimen/margin_10"
+            android:visibility="gone"
+            />
+
+        <RelativeLayout
+            android:id="@+id/relative_container"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="100dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/img_heart_reaction_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/send_msg_btn"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:background="@drawable/dark_circle_bg"
+                android:layout_centerHorizontal="true"
+                android:elevation="6dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="@dimen/padding_16"
+                    android:src="@drawable/ic_favorite" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/send_msg_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dark_circle_bg"
+                android:layout_centerHorizontal="true"
+                android:elevation="6dp"
+               android:layout_alignParentBottom="true">
+            <ImageView
+                android:src="@drawable/ic_comment_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_16"
+                />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

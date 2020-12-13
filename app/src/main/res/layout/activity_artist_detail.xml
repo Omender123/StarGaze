@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        tools:context="star.example.stargaze.activities.ArtistDetailActivity">
+
+        <include layout="@layout/toolbar"
+            android:id="@+id/tool"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@+id/tool">
+        <ImageView
+            android:id="@+id/img_artist"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:elevation="@dimen/margin_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+           />
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/wallet_row_color"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_24"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_artist_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:gravity="start"
+                    android:padding="@dimen/padding_10"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="Bretin jekilar"
+                    android:textSize="@dimen/text_size_18"/>
+                <TextView
+                    android:id="@+id/tv_artist_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:text="Bretin jekilar"
+                    android:textSize="@dimen/text_size_14"/>
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_artist_share"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="start"-->
+<!--                    android:gravity="start"-->
+<!--                    android:text="Bretin jekilar"-->
+<!--                    android:textAlignment="textStart"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="@dimen/text_size_14" />-->
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/txt_label_event"
+            app:layout_constraintTop_toBottomOf="@+id/constraint">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16">
+                <TextView
+                    android:id="@+id/txt_label_about_artist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About"
+                    android:textSize="@dimen/text_size_18"
+                    android:padding="@dimen/padding_5"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_alignParentTop="true"
+                 />
+                <TextView
+                    android:id="@+id/tv_about_artist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Events"
+                    android:layout_below="@+id/txt_label_about_artist"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/white"
+                    />
+            </RelativeLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/txt_label_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Events"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold"
+           android:padding="@dimen/padding_5"
+            android:layout_marginStart="@dimen/margin_16"
+            android:textColor="@color/white"
+           app:layout_constraintBottom_toTopOf="@+id/event_recycler"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/event_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

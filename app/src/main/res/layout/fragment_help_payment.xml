@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:nestedScrollingEnabled="true"
+            android:dividerHeight="@null"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/neu_mor"
+            />
+
+        <star.example.stargaze.utils.NeomorphFrameLayout
+            android:id="@+id/neu_mor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:neomorph_view_type="rectangular"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_elevation="1dp"
+            app:neomorph_corner_radius="7dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/margin_24"
+            app:neomorph_background_color="@color/button_color"
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_highlight_color="@color/opacity_green"
+            >
+            <TextView
+                android:id="@+id/tv_send_query"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/padding_24"
+                android:paddingEnd="@dimen/padding_24"
+                android:paddingTop="@dimen/padding_10"
+                android:paddingBottom="@dimen/padding_10"
+                android:text="Send Your Query"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14"
+                />
+        </star.example.stargaze.utils.NeomorphFrameLayout>
+    </RelativeLayout>
+</layout>

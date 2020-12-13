@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_nav_home"
+        android:title="Home"
+
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_artist"
+        android:enabled="true"
+        android:icon="@drawable/ic_bottom_nav_artist"
+        android:title="Artist"
+
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_events"
+        android:enabled="true"
+        android:icon="@drawable/ic_nav_event"
+        android:title="Events"
+
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_wallet"
+        android:enabled="true"
+        android:icon="@drawable/ic_nav_wallet"
+        android:title="SG Coins"
+
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_profile"
+        android:enabled="true"
+        android:icon="@drawable/ic_nav_user"
+        android:title="Profile"
+
+        app:showAsAction="ifRoom" />
+
+</menu>

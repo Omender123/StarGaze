@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="@dimen/margin_10"
+   >
+
+
+    <LinearLayout
+        android:id="@+id/linear_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/artist_rounded_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_5"
+         >
+        <ImageView
+            android:id="@+id/sender_pic"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:padding="2dp"
+           />
+        <TextView
+            android:id="@+id/sender_name"
+            android:text="John Doe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+          />
+</LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:padding="8dp"
+            android:textAlignment="textStart"
+            android:gravity="start"
+            android:text="hi man, how are you?"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14"
+            />
+
+    <!--    <TextView-->
+<!--        android:id="@+id/text_message_time"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="4dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:textSize="@dimen/text_size_10"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/txt_msg_received"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txt_msg_received" />-->
+
+</LinearLayout>

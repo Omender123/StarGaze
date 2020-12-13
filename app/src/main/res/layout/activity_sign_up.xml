@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<!--    <ScrollView-->
+<!--        android:id="@+id/card_view1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@android:color/white"-->
+<!--        android:fillViewport="true"-->
+<!--       >-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/sign_up_bg"
+
+            tools:context="star.example.stargaze.authentication.SignUpActivity">
+
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:fillViewport="true"
+                android:elevation="10dp"
+
+               >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+
+               >
+                <TextView
+                    android:id="@+id/tv_welcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:padding="@dimen/padding_10"
+                    android:text="@string/create_an_account"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_24"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:id="@+id/line_hor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_gravity="start"
+                    android:background="@drawable/line"
+                    android:layout_marginBottom="@dimen/margin_24"
+                    />
+                <EditText
+                    android:id="@+id/ed_first_name"
+                    style="@style/EditTextStyle1"
+                    android:hint="User Name"
+                    android:drawableLeft="@drawable/user"
+                    android:drawablePadding="@dimen/padding_10"
+                    />
+
+                <EditText
+                    android:id="@+id/ed_mobile"
+                    style="@style/EditTextStyle1"
+                    android:hint="Mobile No"
+                    android:drawableLeft="@drawable/mobile_icon"
+                    android:inputType="number"
+                    android:drawablePadding="@dimen/padding_10"
+                    />
+
+                <EditText
+                    android:id="@+id/ed_email"
+                    style="@style/EditTextStyle1"
+                    android:hint="Email"
+                    android:drawableLeft="@drawable/email_icon"
+                    android:drawablePadding="@dimen/padding_10"/>
+                <TextView
+                    android:id="@+id/ed_dob"
+                    style="@style/EditTextStyle1"
+                    android:hint="DOB :yyyy-mm-dd"
+                    android:textAlignment="gravity"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/date"
+                    android:drawablePadding="@dimen/padding_10"/>
+
+                <EditText
+                    android:id="@+id/ed_pass"
+                    style="@style/EditTextStyle1"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:drawableLeft="@drawable/pass_icon"
+                    android:drawablePadding="@dimen/padding_10"/>
+
+                <EditText
+                    android:id="@+id/ed_c_pass"
+                    style="@style/EditTextStyle1"
+                    android:hint="Confirm Password"
+                    android:inputType="textPassword"
+                    android:drawableLeft="@drawable/pass_icon"
+                    android:drawablePadding="@dimen/padding_10"/>
+
+
+
+                <CheckBox
+                    android:id="@+id/privacy_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/colorPrimary"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/margin_48"
+                    android:checked="false"
+                    android:padding="@dimen/padding_10"
+                    android:text="@string/check_privacy"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+                <star.example.stargaze.utils.NeomorphFrameLayout
+                    android:id="@+id/neu_mor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:neomorph_view_type="rectangular"
+                    app:neomorph_shadow_type="outer"
+                    app:neomorph_elevation="1dp"
+                    app:neomorph_corner_radius="7dp"
+                    app:neomorph_background_color="@color/button_color"
+                    app:neomorph_shadow_color="@color/shadowBlack"
+                    app:neomorph_highlight_color="@color/neomorph_highlight_color_red"
+                    >
+                    <TextView
+                        android:id="@+id/img_register"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/padding_24"
+                        android:paddingEnd="@dimen/padding_24"
+                        android:paddingTop="@dimen/padding_10"
+                        android:paddingBottom="@dimen/padding_10"
+                        android:text="@string/next"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_14"
+                        />
+                </star.example.stargaze.utils.NeomorphFrameLayout>
+
+                <TextView
+                    android:id="@+id/goto_sign_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_10"
+                    android:text="@string/already_user_sign_in"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_size_12" />
+
+            </LinearLayout>
+            </ScrollView>
+
+<!--            <ImageView-->
+<!--                android:id="@+id/img_bottom"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/bottom_img"-->
+<!--                android:adjustViewBounds="true"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                />-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--        </LinearLayout>-->
+<!--        </ScrollView>-->
+
+</layout>

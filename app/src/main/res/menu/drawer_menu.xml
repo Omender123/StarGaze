@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+<!--        <item-->
+<!--            android:id="@+id/nav_home"-->
+<!--            android:icon="@drawable/ic_home"-->
+<!--            android:title="@string/nav_home" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_my_address"-->
+<!--            android:icon="@drawable/ic_my_address"-->
+<!--            android:title="@string/nav_my_addresses" />-->
+
+<!--        <item-->
+<!--            android:id="@+id/nav_my_order"-->
+<!--            android:icon="@drawable/ic_cart_white"-->
+<!--            android:title="@string/nav_my_orders" />-->
+
+<!--        <item-->
+<!--            android:id="@+id/nav_my_wallet"-->
+<!--            android:icon="@drawable/ic_wallet"-->
+<!--            android:title="@string/nav_my_wallet" />-->
+
+<!--        <item-->
+<!--            android:id="@+id/nav_my_offer"-->
+<!--            android:icon="@drawable/ic_sale"-->
+<!--            android:title="@string/nav_my_offers" />-->
+    </group>
+<!--    <item android:title="@string/other">-->
+<!--        <menu>-->
+<!--            <item-->
+<!--                android:id="@+id/nav_about_us"-->
+<!--                android:icon="@drawable/ic_about_us_icon"-->
+<!--                android:title="@string/nav_about_us" />-->
+
+
+<!--            <item-->
+<!--                android:id="@+id/nav_share"-->
+<!--                android:icon="@drawable/ic_share"-->
+<!--                android:title="@string/share" />-->
+<!--            <item-->
+<!--                android:id="@+id/nav_cust_support"-->
+<!--                android:icon="@drawable/ic_customer_support"-->
+<!--                android:title="@string/customer_support" />-->
+<!--            <item-->
+<!--                android:id="@+id/nav_change_password"-->
+<!--                android:icon="@drawable/ic_about_us_icon"-->
+<!--                android:title="@string/change_password" />-->
+<!--            <item-->
+<!--                android:id="@+id/nav_log_out"-->
+<!--                android:icon="@drawable/ic_logout"-->
+<!--                android:title="@string/logout" />-->
+<!--        </menu>-->
+<!--    </item>-->
+</menu>

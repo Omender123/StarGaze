@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "164073183309",
+    "firebase_url": "https://stargaze-6a9d2.firebaseio.com",
+    "project_id": "stargaze-6a9d2",
+    "storage_bucket": "stargaze-6a9d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164073183309:android:a85e187f432f2d02ce2404",
+        "android_client_info": {
+          "package_name": "star.example.stargaze"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164073183309-uk91f2mphhnb4budac1ek43j66strofh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "star.example.stargaze",
+            "certificate_hash": "82cbd60107c8f97026dfeb149a2734162e6a43ef"
+          }
+        },
+        {
+          "client_id": "164073183309-4uk5f38n25ik7voofeb24dmb0kl938ca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuM0pmhaMEw-qfuOM-1EhpVufrmvwKA7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164073183309-4uk5f38n25ik7voofeb24dmb0kl938ca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

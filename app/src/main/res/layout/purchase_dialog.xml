@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:gravity="center"
+    android:background="@drawable/alert_msg_bg_rounded_top"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_purchase_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:textAlignment="textStart"
+        android:text="You Don't have purchased this event yet,\nClick to Purchase! "
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@android:color/transparent"
+        android:padding="@dimen/padding_10"
+        android:textSize="@dimen/text_size_14"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/margin_24"
+        android:textColor="@color/white" />
+
+
+
+    <star.example.stargaze.utils.NeomorphFrameLayout
+        android:id="@+id/neu_mor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:neomorph_view_type="rectangular"
+        app:neomorph_shadow_type="inner"
+        app:neomorph_elevation="8dp"
+        app:neomorph_corner_radius="7dp"
+        android:layout_below="@+id/discount_container"
+        app:neomorph_background_color="@color/button_color"
+        app:neomorph_shadow_color="@color/neomorph_shadow_color"
+        app:neomorph_highlight_color="@color/neomorph_highlight_color"
+        >
+        <TextView
+            android:id="@+id/tv_purchase_btn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_24"
+            android:paddingEnd="@dimen/padding_24"
+            android:paddingTop="@dimen/padding_10"
+            android:paddingBottom="@dimen/padding_10"
+            android:text="Purchase"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14"
+            />
+    </star.example.stargaze.utils.NeomorphFrameLayout>
+</LinearLayout>

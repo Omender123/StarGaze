@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/relative_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="@drawable/chat_screen_bg">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linear_chat_box_container"
+        android:layout_marginTop="@dimen/margin_24"
+        />
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progress_bar"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/chat_recycler"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:visibility="gone"-->
+<!--        android:elevation="10dp"/>-->
+    <LinearLayout
+        android:id="@+id/linear_chat_box_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:minHeight="48dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/padding_10">
+
+        <EditText
+            android:id="@+id/edit_chat_box"
+            android:hint="your Comments.."
+            android:textColorHint="@color/login_border"
+            android:background="@drawable/input_text_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_16"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:maxLines="6" />
+
+        <ImageView
+            android:id="@+id/send_msg_btn"
+            android:src="@drawable/ic_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:padding="@dimen/padding_16"
+            android:layout_marginStart="@dimen/margin_10"
+            android:background="@drawable/circle_border_bg"
+            android:layout_gravity="end" />
+    </LinearLayout>
+</RelativeLayout>

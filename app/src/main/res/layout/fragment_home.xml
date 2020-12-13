@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<!--    <androidx.drawerlayout.widget.DrawerLayout-->
+<!--        android:id="@+id/drawer_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        tools:context=".activities.MainActivity">-->
+
+        <RelativeLayout
+            android:id="@+id/root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+        >
+            <LinearLayout
+                android:id="@+id/search_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:layout_alignParentTop="true"
+               >
+
+                <TextView
+                    android:id="@+id/txt_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:padding="@dimen/padding_5"
+                    android:background="@drawable/search_input_bg"
+                    android:drawableStart="@drawable/ic_search"
+                    android:drawablePadding="14dp"
+                    android:elevation="0dp"
+                    android:gravity="center"
+                    android:hint="Search Products..."
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="16dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="#404253"
+                    android:textColorHint="#33404253"
+                    tools:ignore="RtlCompat"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linear_toolbar"
+                    app:layout_constraintBottom_toTopOf="@+id/recycler_my_event" />
+            </LinearLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark"
+                android:fillViewport="true"
+                android:layout_below="@+id/search_container"
+                android:layout_margin="1dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimaryDark"
+                    android:orientation="vertical">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/pager_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginStart="@dimen/margin_16"
+                        android:layout_marginEnd="@dimen/margin_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:layout_marginBottom="@dimen/margin_10"
+
+                        >
+                        <!--                    <ProgressBar-->
+                        <!--                        android:id="@+id/otp_progress"-->
+                        <!--                        android:layout_width="wrap_content"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:layout_gravity="center_horizontal"-->
+                        <!--                        android:background="@drawable/circle_shape"-->
+                        <!--                        android:indeterminateDrawable="@drawable/gradient_progress"-->
+                        <!--                        />-->
+                        <star.example.stargaze.utils.ClickableViewPager
+                            android:id="@+id/banner_pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimaryDark"
+                            android:layout_gravity="center"
+
+                            />
+                        <LinearLayout
+                            android:id="@+id/dots_panel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:elevation="5dp"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_marginBottom="@dimen/margin_5" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/txt_label_event"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Popular Events"
+                        android:layout_marginStart="@dimen/margin_16"
+                        android:textSize="@dimen/text_size_18"
+                        android:paddingTop="@dimen/padding_10"
+                        android:paddingBottom="@dimen/padding_5"
+                        android:paddingEnd="@dimen/padding_10"
+                        android:textColor="@color/white"
+                       />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/parent_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+        </RelativeLayout>
+
+
+
+</layout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <include
+            android:id="@+id/tool"
+            layout="@layout/toolbar" />
+
+<LinearLayout
+    android:id="@+id/container2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tool">
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="start"
+            android:padding="@dimen/padding_10"
+            android:text="Send Queries"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_24"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/margin_5"/>
+
+        <LinearLayout
+            android:id="@+id/line_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_welcome"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_24"
+            android:background="@drawable/line"
+            android:orientation="vertical" />
+</LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+           app:layout_constraintTop_toBottomOf="@+id/container2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+          >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="6dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <EditText
+                    android:id="@+id/ed_user_name"
+                    style="@style/EditTextStyle1"
+                    android:layout_below="@+id/line_hor"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/user"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:hint="Name" />
+                <EditText
+                    android:id="@+id/ed_email"
+                    style="@style/EditTextStyle1"
+                    android:layout_below="@+id/ed_user_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/email_icon"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:hint="Email Id" />
+                <EditText
+                    android:id="@+id/ed_subject"
+                    style="@style/EditTextStyle1"
+                    android:layout_below="@+id/ed_email"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:paddingStart="@dimen/padding_16"
+                    android:hint="Subject" />
+
+
+                <EditText
+                    android:id="@+id/ed_query"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/ed_user_name"
+                    android:layout_gravity="start"
+                    android:layout_margin="@dimen/margin_24"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginBottom="@dimen/margin_24"
+                    android:background="@drawable/input_text_bg"
+                    android:padding="@dimen/padding_16"
+                    android:hint="Your Query"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/login_border"
+                    android:textAlignment="textStart"
+                    android:gravity="start"
+                   />
+                </LinearLayout>
+
+                <star.example.stargaze.utils.NeomorphFrameLayout
+                    android:id="@+id/neu_mor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/container"
+                    android:layout_centerHorizontal="true"
+                    app:neomorph_background_color="@color/button_color"
+                    app:neomorph_corner_radius="7dp"
+                    app:neomorph_elevation="1dp"
+                    app:neomorph_highlight_color="@color/neomorph_highlight_color_red"
+                    app:neomorph_shadow_color="@color/shadowBlack"
+                    app:neomorph_shadow_type="outer"
+                    app:neomorph_view_type="rectangular"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:layout_marginStart="@dimen/margin_24"
+                    android:layout_marginEnd="@dimen/margin_24">
+
+                    <TextView
+                        android:id="@+id/tv_send_query_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/padding_24"
+                        android:paddingTop="@dimen/padding_10"
+                        android:paddingEnd="@dimen/padding_24"
+                        android:paddingBottom="@dimen/padding_10"
+                        android:text="Send Query"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="bold" />
+                </star.example.stargaze.utils.NeomorphFrameLayout>
+
+                <TextView
+                    android:id="@+id/goto_sign_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/neu_mor"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_10"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_size_12" />
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
