@@ -182,11 +182,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 intent = new Intent(context, MyReferralActivity.class);
                 binding.drawerLayout.closeDrawer(GravityCompat.START);
                 break;
-            case 3:
+         /*   case 3:
                 AppUtils.shareApp(context);
                 binding.drawerLayout.closeDrawer(GravityCompat.START);
                 break;
-            case 4:
+        */    case 3:
                 binding.toolbar.setVisibility(View.GONE);
                 FragmentHelpFAQ fragmentSupport = new FragmentHelpFAQ();
                 setFrameLayout(fragmentSupport);
@@ -204,7 +204,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 intent = new Intent(context, ForgotActivity.class);
                 binding.drawerLayout.closeDrawer(GravityCompat.START);
                 break;*/
-            case 5:
+            case 4:
                 dialog.show();
                 new Handler().postDelayed(new Runnable() {
                     @Override

@@ -2,6 +2,8 @@ package star.example.stargaze.api;
 
 
 
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import star.example.stargaze.models.PartialPayResp;
 import star.example.stargaze.models.request.ContactBody;
 import star.example.stargaze.models.request.EventFilterBody;
@@ -16,6 +18,7 @@ import star.example.stargaze.models.request.RazorOrderBody;
 import star.example.stargaze.models.request.RazorSaveDataBody;
 import star.example.stargaze.models.request.RegisterOTP;
 import star.example.stargaze.models.request.SearchReqBody;
+import star.example.stargaze.models.request.Update_Password;
 import star.example.stargaze.models.request.User;
 import star.example.stargaze.models.request.UserCredential;
 import star.example.stargaze.models.request.WalletAmountBody;
@@ -76,8 +79,20 @@ public interface ApiService {
     @POST("user/otp/resend")
     Call<ResponseBody>reSendOtp(@Body Phone phone);
 
+
+   @FormUrlEncoded
+    @PUT("user/update_password")
+    Call<ResponseBody>Update_password(
+            @Field("password") String NewPassword,
+            @Field("confirmedPassword") String Confirm_pass,
+            @Field("phone") String Phone_no);
+
     @POST("user/otp/verify")
     Call<ResponseBody>verifyOtp(@Body Otp otp);
+
+    @PUT("user/update_password")
+    Call<ResponseBody>Update_Passwords(@Body Update_Password update_password);
+
 
     @PUT("user/changepassword")
     Call<ResponseBody> changePassword(@Body Password password);

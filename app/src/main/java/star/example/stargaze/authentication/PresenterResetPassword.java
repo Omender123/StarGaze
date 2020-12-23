@@ -1,9 +1,11 @@
 package star.example.stargaze.authentication;
 
 import android.content.Context;
+import android.widget.Toast;
 
 
 import star.example.stargaze.models.request.Password;
+import star.example.stargaze.models.request.Update_Password;
 import star.example.stargaze.utils.AppUtils;
 
 import org.json.JSONObject;
@@ -15,12 +17,13 @@ import retrofit2.Response;
 
 public class PresenterResetPassword {
     ResetPasswordView view;
+    Context context;
 
     public PresenterResetPassword(ResetPasswordView view) {
         this.view = view;
     }
-    public void resetPassword(Password password){
-        Call<ResponseBody> call = AppUtils.getApi((Context) view).changePassword(password);
+    public void resetPassword(Update_Password password){
+        Call<ResponseBody> call = AppUtils.getApi((Context) view).Update_Passwords(password);
         view.showHideProgress(true);
         call.enqueue(new Callback<ResponseBody>() {
             @Override
@@ -34,7 +37,8 @@ public class PresenterResetPassword {
                         JSONObject jsonObject =new JSONObject(errorRes);
                         String err_msg  = jsonObject.getString("error");
                         int status= jsonObject.getInt("status");
-                        view.onError(err_msg);
+                        Toast.makeText(context, ""+err_msg, Toast.LENGTH_SHORT).show();
+                        //view.onError(err_msg);
                     }
                     catch (Exception ex){
                         ex.printStackTrace();

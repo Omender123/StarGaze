@@ -56,6 +56,8 @@ public class VerifyOTPActivity extends AppCompatActivity implements VerifyOtpPre
         Snackbar.make(mView, message, Snackbar.LENGTH_SHORT).show();
 
         Intent intent = new Intent(this, ResetPasswordActivity.class);
+        String phone_no = getIntent().getStringExtra("phone");
+            intent.putExtra("phones",phone_no);
         startActivity(intent);
     }
 
