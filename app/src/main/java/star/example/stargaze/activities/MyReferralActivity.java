@@ -1,9 +1,11 @@
 package star.example.stargaze.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.databinding.DataBindingUtil;
 
 import android.app.Dialog;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,7 +32,7 @@ public class MyReferralActivity extends AppCompatActivity implements View.OnClic
     private Context context;
     private View view;
     private Dialog dialog;
-
+    CardView textcopy;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +43,22 @@ public class MyReferralActivity extends AppCompatActivity implements View.OnClic
         getRefCode(context);
         binding.imgBackArrow.setOnClickListener(this);
         binding.shareReferralCode.setOnClickListener(this);
+        textcopy = findViewById(R.id.textcopy);
+
+        String code = MyPreferences.getInstance(context).getString(PrefConf.KEY_MY_REFERRAL_CODE,"");
+
+
+        textcopy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ClipboardManager cm = (ClipboardManager)getApplicationContext().getSystemService(Context.CLIPBOARD_SERVICE);
+                cm.setText(code);
+                Toast.makeText(getApplicationContext(), "Copied ", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
     }
 
     @Override
@@ -52,6 +70,7 @@ public class MyReferralActivity extends AppCompatActivity implements View.OnClic
             case R.id.share_referral_code:
                 shareReferral(context);
                 break;
+
 
         }
     }

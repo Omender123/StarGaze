@@ -31,10 +31,11 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginTop="8dp"
+                android:layout_marginLeft="60dp"
                 android:layout_toRightOf="@+id/img_back_arrow"
                 android:padding="@dimen/padding_5"
-                android:text="@string/referral_code"
-                android:textAlignment="textStart"
+                android:text="MY REFERRAL CODE"
+                android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size_14"
                 android:textStyle="bold" />
@@ -51,7 +52,7 @@
                 android:id="@+id/img_user_refer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_profile_pic"
+                android:src="@drawable/ic_group_23"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/margin_48"
                 android:layout_marginBottom="@dimen/margin_16"
@@ -66,33 +67,33 @@
                 android:textStyle="bold"
                 android:text="@string/your_code"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/colorAccent"
                 android:padding="@dimen/padding_10"
                 android:layout_below="@+id/img_user_refer"
                 />
-            <LinearLayout
+         <!--   <LinearLayout
                 android:id="@+id/referral_container"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_below="@+id/txt_label_code"
                 android:background="@drawable/referral_bg"
                 android:gravity="center"
-                android:layout_margin="@dimen/margin_16">
+                android:layout_margin="@dimen/margin_16"></LinearLayout>-->
                 <TextView
                     android:id="@+id/txt_referral_code"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textSize="@dimen/text_size_14"
+                    android:textSize="30dp"
                     android:textStyle="bold"
+                    android:text="ljhnavcsjkhac"
                     android:textAlignment="center"
-                    android:textColor="@color/orange"
-                    android:padding="@dimen/padding_10"
+                    android:textColor="@color/white"
+                    android:layout_below="@+id/txt_label_code"
+                    android:padding="5dp"
                     />
-            </LinearLayout>
 
-            <TextView
+            <!--  <TextView
                 android:id="@+id/txt_label_referral"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -103,17 +104,55 @@
                 android:textAlignment="center"
                 android:textColor="@color/gray_light"
                 android:padding="@dimen/padding_10"
-                android:layout_below="@+id/referral_container"
+                android:layout_below="@+id/txt_referral_code"
                 android:layout_margin="@dimen/margin_16"
-                />
-            <ImageView
+                />-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/textcopy"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/txt_referral_code"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginRight="130dp"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="5dp"
+                app:cardBackgroundColor="@color/colorAccent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Copy"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+            </androidx.cardview.widget.CardView>
+
+         <!--   <ImageView
                 android:id="@+id/share_referral_code"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txt_label_referral"
+                android:layout_below="@+id/textcopy"
                 android:layout_centerHorizontal="true"
                 android:padding="@dimen/padding_10"
-                android:src="@drawable/ic_share2"/>
+                android:src="@drawable/ic_share2"/>-->
+
+            <TextView
+                android:id="@+id/share_referral_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_30"
+                android:text="Share"
+                android:layout_marginBottom="70dp"
+                android:drawableLeft="@drawable/ic_share12"
+                android:drawablePadding="15dp"
+                android:textColor="@color/colorAccent"
+                />
+
         </RelativeLayout>
 
     </RelativeLayout>
