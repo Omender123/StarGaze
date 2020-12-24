@@ -33,7 +33,7 @@ public class FragmentHelpFAQ extends Fragment  implements View.OnClickListener {
         pagerAdapter.addFragment(new FragmentHelpAccount(),"Account");
         pagerAdapter.addFragment(new FragmentHelpPayment(),"Payment");
         pagerAdapter.addFragment(new FragmentHelpEvent(),"Event");
-        pagerAdapter.addFragment(new FragmentHelpAbout(),"About");
+       // pagerAdapter.addFragment(new FragmentHelpAbout(),"About");
         binding.viewPager.setAdapter(pagerAdapter);
         binding.tabLayout.setupWithViewPager( binding.viewPager);
         binding.txtSearch.setOnClickListener(this);

@@ -17,13 +17,13 @@
     <string name="mobile_no">Mobile No</string>
     <string name="password_changed">PASSWORD CHANGED</string>
     <string name="please_add_address">You don\'t have saved addresses,Please add your address!!</string>
-    <string name="razor_api_key">rzp_test_aJmPMB5TbEdjJG</string>
+    <string name="razor_api_key">rzp_live_tBQpkPuxMK608Y</string>
     <string name="No_Data_Found">You haven\'t, made any order ,Please make an order first!!</string>
 
 
     <string name="nav_my_addresses">My Addresses</string>
     <string name="my_order">My Orders</string>
-    <string name="my_wallet">My Wallet</string>
+    <string name="my_wallet"> My SG Coins</string>
     <string name="my_referral">Referral Code</string>
     <string name="my_ticket">My Ticket</string>
     <string name="drawer_nav_about_us">About Us</string>

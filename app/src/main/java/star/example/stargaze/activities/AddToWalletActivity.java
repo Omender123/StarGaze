@@ -67,7 +67,7 @@ public class AddToWalletActivity extends AppCompatActivity implements View.OnCli
             dialog.dismiss();
         }
     }
-
+//same
     @Override
     public void onError(String message) {
         if(message.equalsIgnoreCase("Token Expired")){
@@ -83,7 +83,9 @@ public class AddToWalletActivity extends AppCompatActivity implements View.OnCli
         System.out.println("amt w"+resp.getAmount());
         startPayment(resp.getId());
     }
+//end same
 
+    //same1
     @Override
     public void onRazorPaymentCaptureSuccess(CapturePaymentSuccessResp successResp) {
         System.out.println("amt rz"+successResp.getAmount());

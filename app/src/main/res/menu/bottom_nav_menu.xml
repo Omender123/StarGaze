@@ -25,7 +25,7 @@
 
         app:showAsAction="ifRoom" />
 
-    <item
+    <!--<item
         android:id="@+id/action_wallet"
         android:enabled="true"
         android:icon="@drawable/ic_nav_wallet"
@@ -37,7 +37,6 @@
         android:enabled="true"
         android:icon="@drawable/ic_nav_user"
         android:title="Profile"
-
-        app:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom" />-->
 
 </menu>

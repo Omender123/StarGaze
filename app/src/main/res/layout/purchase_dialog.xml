@@ -13,15 +13,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:textAlignment="textStart"
-        android:text="You Don't have purchased this event yet,\nClick to Purchase! "
+        android:textAlignment="center"
+        android:text="Oops the event is not yet booked.\nClick below to book the event.  "
         android:layout_marginTop="@dimen/margin_10"
         android:background="@android:color/transparent"
         android:padding="@dimen/padding_10"
         android:textSize="@dimen/text_size_14"
         android:textStyle="bold"
         android:layout_marginStart="@dimen/margin_24"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        tools:ignore="RtlCompat" />
 
 
 

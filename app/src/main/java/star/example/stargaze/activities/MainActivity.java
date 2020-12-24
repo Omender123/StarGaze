@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 FragmentMyEvent fragmentMyEvent = new FragmentMyEvent();
                 setFrameLayout(fragmentMyEvent);
                 break;
-            case R.id.action_wallet:
+         /*   case R.id.action_wallet:
                 binding.toolbar.setVisibility(View.GONE);
                 FragmentWallet wallet = new FragmentWallet();
                 setFrameLayout(wallet);
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.action_profile:
                 Intent intent1 = new Intent(context,UpdateProfileActivity.class);
                 startActivity(intent1);
-                break;
+                break;*/
         }
         return true;
     }

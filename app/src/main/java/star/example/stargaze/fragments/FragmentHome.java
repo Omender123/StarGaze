@@ -66,7 +66,7 @@ public class FragmentHome extends Fragment implements EventAdapter.OnEventItemLi
 
     private RelativeLayout view;
     private Timer timer;
-    private final long delay = 400;
+    private final long delay = 2500;
     private final long repeat = 2500;
     private int currentPage = 0;
     private Handler handler;
